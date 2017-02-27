@@ -12,7 +12,7 @@ https://play.google.com/store/apps/details?id=net.rosoftlab.httpwidget1&hl=en
 
 - add the following cron line to your crontab (where `myopenpas` is your openaps init directory)
 
-`@reboot cd /root/myopenaps/enact && python -m SimpleHTTPServer 1337
+`@reboot cd /root/myopenaps/enact && python -m SimpleHTTPServer 1337`
 
 - add the following openaps alias to your `openaps.ini`
 
