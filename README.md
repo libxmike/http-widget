@@ -22,7 +22,7 @@ https://play.google.com/store/apps/details?id=net.rosoftlab.httpwidget1&hl=en
 
 `* * * * * cd /root/myopenaps && ( ps aux | grep -v grep | grep -q 'openaps pump-loop' || openaps pump-loop ) 2>&1 | tee -a /var/log/openaps/pump-loop.log && openaps http-widget > /dev/null 2>&1`
 `
-On your Android phone add a HTTP widget as you know how to add widgets normally and set the the http with your rig IP address using port 1337
+- On your Android phone add a HTTP widget as you know how to add widgets normally and set the the http with your rig IP address using port 1337
 
 ![add-widget](https://cloud.githubusercontent.com/assets/12679825/23367485/b5d3f93c-fd0a-11e6-9ee1-f6d6c04b1c25.JPG)
 
