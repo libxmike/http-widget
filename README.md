@@ -10,6 +10,10 @@ Android "HTTP widget" allows you to show text inside the widget, perfect for Ope
 - install "HTTP widget" on your Android mobil 
 https://play.google.com/store/apps/details?id=net.rosoftlab.httpwidget1&hl=en
 
+- install jq
+
+`sudo apt-get install jq`
+
 - add the following cron line to your crontab (where `myopenpas` is your openaps init directory)
 
 `@reboot cd /root/myopenaps/enact && python -m SimpleHTTPServer 1337`
