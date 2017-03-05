@@ -20,7 +20,7 @@ https://play.google.com/store/apps/details?id=net.rosoftlab.httpwidget1&hl=en
 
 - add the following openaps alias to your `openaps.ini`
 
-`http-widget = ! bash -c "(cat ~/myopenaps/enact/enacted.json | jq .timestamp && cat ~/myopenaps/enact/enacted.json | jq .reason && cat ~/myopenaps/enact/enacted.json | grep rate && cat ~/myopenaps/monitor/edison-battery.json) > ~/myopenaps/enact/index.html"
+`http-widget = ! bash -c "(echo -n 'Time: ' &&cat ~/myopenaps/enact/enacted.json | jq .timestamp | awk '{print substr($0,13,8)}' && cat ~/myopenaps/enact/enacted.json | jq .reason && echo -n 'TBR: ' && cat ~/myopenaps/enact/enacted.json | jq .rate + && echo -n 'IOB: ' && cat ~/myopenaps/enact/enacted.json | jq .IOB && cat ~/myopenaps/monitor/edison-battery.json ) > ~/myopenaps/enact/index.html"
 `
 - modify the `openaps pump-loop` cron line to (`openaps http-widget` needs to be run each minute)
 
