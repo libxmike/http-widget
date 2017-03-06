@@ -20,7 +20,7 @@ https://play.google.com/store/apps/details?id=net.rosoftlab.httpwidget1&hl=en
 
 - add the following openaps alias to your `openaps.ini`
 
-`http-widget = ! bash -c "( jq .timestamp ~/myopenaps/enact/enacted.json | awk '{print substr($0,13,5)}' && jq -r .reason ~/myopenaps/enact/enacted.json && echo -n 'TBR: ' && jq .rate ~/myopenaps/enact/enacted.json && echo -n 'IOB: ' && jq .IOB ~/myopenaps/enact/enacted.json && echo -n 'Edison: ' && (~/src/EdisonVoltage/voltage short) | awk '{print $2,$1}' && echo -n 'Pump: ' && cat ~/myopenaps/monitor/reservoir.json && echo -n 'U ' && jq .voltage ~/myopenaps/monitor/battery.json | tr '\n' ' ' && echo 'V') > ~/myopenaps/enact/index.html"`
+`http-widget = ! bash -c "( jq .timestamp ~/myopenaps/enact/enacted.json | awk '{print substr($0,13,5)}' && jq -r .reason ~/myopenaps/enact/enacted.json && echo -n 'TBR: ' && jq .rate ~/myopenaps/enact/enacted.json && echo -n 'IOB: ' && jq .IOB ~/myopenaps/enact/enacted.json && echo -n 'Edison: ' && (~/src/EdisonVoltage/voltage short) | awk '{print $2,$1}' && echo -n 'Pump: ' && cat ~/myopenaps/monitor/reservoir.json && echo -n 'U ' && jq .voltage ~/myopenaps/monitor/battery.json | tr '\n' 'v' ) > ~/myopenaps/enact/index.html"`
 
 - modify the `openaps pump-loop` cron line to (`openaps http-widget` needs to be run each minute)
 
